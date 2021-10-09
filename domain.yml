@@ -1,0 +1,52 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- faq:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_faq/ask_food:
+  - text: We have Lays, Parle-G, Cream biscuits, Coca-Cola, Pepsi and many more!
+  utter_faq/ask_elec:
+  - text: We have HP laptops, LG TVs, Microwaves and similar products.
+  utter_faq/ask_clothes:
+  - text: We have Men's jeans, Men's Shirts and T-shirts. Children's clothing are available as well.
+  utter_faq/ask_order:
+  - text: You can order easily using our online platform. When you find a product you need, you can add it to cart, login and go through the ordering process.
+  utter_faq/ask_after_order:
+  - text: We will send you the tracking code of the shipment when the parcel has been sent. You can track your order using the code!
+actions: []
+forms: {}
+e2e_actions: []
